@@ -1,6 +1,9 @@
-﻿namespace Bookify.Application.Abstractions.Messaging;
+﻿using Bookify.Domain.Abstractions;
+using MediatR;
 
-public class IQuery
+namespace Bookify.Application.Abstractions.Messaging;
+
+public interface IQuery<TResponse> : IRequest<Result<TResponse>>
 {
     
 }

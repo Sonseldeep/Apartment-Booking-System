@@ -1,6 +1,10 @@
-﻿namespace Bookify.Domain.Apartment;
+﻿using Bookify.Domain.Abstractions;
 
-public class ApartmentErrors
+namespace Bookify.Domain.Apartment;
+
+public static class ApartmentErrors
 {
-    
+    public static readonly Error NotFound = new(
+        "Apartment.NotFound",
+        "The apartment with the specified identifier was not found");
 }
